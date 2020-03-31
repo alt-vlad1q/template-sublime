@@ -1,7 +1,7 @@
 #include <iostream>
-
 int main(int argc, char *argv[])
 {
-    /* code */
-    return 0;
+
+
+    return EXIT_SUCCESS;
 }
