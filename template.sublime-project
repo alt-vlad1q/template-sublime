@@ -1,0 +1,37 @@
+{
+	"folders":
+	[
+		{
+			"name": "Project",
+			"path": ".",
+			// "folder_exclude_patterns": ["backup"]
+		}
+	],
+
+	"build_systems":
+	[
+		{
+			"name": "Run target",
+			"shell_cmd": "cd $folder/bin && ./$project_base_name"
+		},
+	],
+
+	"settings":
+	{
+		"draw_white_space": "all",
+		"tab_size": 4,
+		"translate_tabs_to_spaces": true,
+
+		"cmake":
+		{
+			"build_folder": "$folder/build",
+			"command_line_overrides":
+			{
+				"BUILD_SHARED_LIBS": true,
+				"CMAKE_BUILD_TYPE": "Debug",
+				"CMAKE_EXPORT_COMPILE_COMMANDS": true
+			},
+			"generator": "Unix Makefiles"
+		}
+	}
+}

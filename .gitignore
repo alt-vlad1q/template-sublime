@@ -1,0 +1,9 @@
+bin
+lib
+build/*
+
+*.user
+*.tmp
+*.old
+*.sublime-workspace
+!.gitkeep
