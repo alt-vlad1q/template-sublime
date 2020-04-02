@@ -16,4 +16,3 @@ else:
     os.rename(r'./template.sublime-project', r'./' + sys.argv[1].lower() + '.sublime-project')
     os.rename(os.getcwd(), os.getcwd().replace("template-sublime", sys.argv[1]))
     os.system('git remote remove origin')
-    os.system('cd ../' + sys.argv[1])
