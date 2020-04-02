@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.13)
-project(template)
+project(template-sublime)
 
 set(CMAKE_INCLUDE_CURRENT_DIR ON)
 set(CMAKE_AUTOMOC ON)
