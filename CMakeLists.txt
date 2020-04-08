@@ -17,6 +17,10 @@ set(CMAKE_LIBRARY_OUTPUT_DIRECTORY  ${PROJECT_SOURCE_DIR}/lib)
 
 add_executable(${PROJECT_NAME} main.cpp)
 
+#message("Supported features = ${CMAKE_CXX_COMPILE_FEATURES}")
+#target_compile_features(${PROJECT_NAME} PRIVATE ${CMAKE_CXX_COMPILE_FEATURES})
+#target_link_libraries(${PROJECT_NAME} rt)
+
 find_package(Boost REQUIRED COMPONENTS iostreams)
 target_link_libraries(${PROJECT_NAME} ${Boost_LIBRARIES})
 target_include_directories(${PROJECT_NAME} PRIVATE ${Boost_INCLUDE_DIRS})
@@ -26,8 +30,6 @@ target_link_libraries(${PROJECT_NAME} Qt5::Core Qt5::Quick)
 
 find_package (Threads)
 target_link_libraries (${PROJECT_NAME} ${CMAKE_THREAD_LIBS_INIT})
-
-target_link_libraries(${PROJECT_NAME} rt)
 
 #find_program(WINDEPLOYQT_EXECUTABLE NAMES windeployqt HINTS ${QTDIR} ENV QTDIR PATH_SUFFIXES bin)
 #add_custom_command(TARGET ${PROJECT_NAME} POST_BUILD
